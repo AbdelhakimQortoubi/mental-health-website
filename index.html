@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Matters - Our Organization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #2d5d4d 0%, #4a8b76 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #8B9D83 0%, #7BA3A8 100%);
+            color: white;
+            padding: 8rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: -200px;
+            right: -100px;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -50px;
+        }
+
+        .hero .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: #C8A882;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: #2d5d4d;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d5d4d;
+            font-weight: 400;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        #about {
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-text h3 {
+            color: #2d5d4d;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #7BA3A8 0%, #8B9D83 100%);
+            height: 400px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Mission Section */
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-top: 4px solid #7BA3A8;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .mission-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card h3 {
+            color: #2d5d4d;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .mission-card p {
+            color: #666;
+        }
+
+        /* Partners Section */
+        #partners {
+            background: #f8f9fa;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .partner-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .partner-logo {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #8B9D83 0%, #7BA3A8 100%);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .partner-card h4 {
+            color: #2d5d4d;
+            margin-bottom: 0.5rem;
+        }
+
+        .partner-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Resources Section */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .resource-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: scale(1.05);
+        }
+
+        .resource-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .resource-card ul {
+            list-style: none;
+        }
+
+        .resource-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .resource-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+        }
+
+        /* Professionals Section */
+        #professionals {
+            background: white;
+        }
+
+        .professionals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .professional-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #7BA3A8;
+            text-align: center;
+        }
+
+        .professional-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .professional-image {
+            margin-bottom: 1.5rem;
+        }
+
+        .professional-icon {
+            font-size: 4rem;
+            margin: 0 auto;
+        }
+
+        .professional-card h3 {
+            color: #2d5d4d;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .professional-card .specialty {
+            color: #7BA3A8;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .professional-info {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .professional-info p {
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .professional-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .professional-contact {
+            text-align: left;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .professional-contact p {
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .professional-contact a {
+            color: #2d5d4d;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .professional-contact a:hover {
+            color: #7BA3A8;
+        }
+
+        /* Event Section */
+        #event {
+            background: linear-gradient(135deg, #2d5d4d 0%, #4a8b76 100%);
+            color: white;
+        }
+
+        .event-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            color: #2d3748;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .event-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .event-detail {
+            text-align: center;
+        }
+
+        .event-detail .label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-detail .value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d5d4d;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #f8f9fa;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2d5d4d;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #7BA3A8;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #2d5d4d 0%, #4a8b76 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            color: #2d5d4d;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: #7BA3A8;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .copyright {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+
+        /* Social Media Icons */
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            vertical-align: middle;
+            border-radius: 8px;
+        }
+
+        .social-icon-small {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .contact-item .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-item .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s;
+        }
+
+        .contact-item .social-links a:hover {
+            transform: translateX(5px);
+        }
+
+        .social-media a {
+            transition: all 0.3s;
+        }
+
+        .social-media a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-grid,
+            .partners-grid,
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                width: 100%;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="mental-health-logo.jpeg" alt="Mental Health Logo">
+                <span>Mental Health Matters</span>
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#professionals">Our Professionals</a></li>
+                <li><a href="#event">Upcoming Event</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>MENTAL HEALTH</h1>
+            <h2>Matters</h2>
+            <p style="font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; color: #C8A882;">You Are Not Alone</p>
+            <p>Supporting mental wellness through education, community, and compassionate care</p>
+            <a href="#contact" class="btn">Get Involved</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">We are a dedicated organization committed to promoting mental health awareness and providing support to our community</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>Mental Health Matters is a collaborative initiative bringing together passionate individuals and organizations dedicated to breaking the stigma surrounding mental health. We believe that mental wellness is fundamental to overall well-being and that everyone deserves access to support and resources.</p>
+                    
+                    <h3>Our Story</h3>
+                    <p>Founded by a coalition of mental health professionals, educators, and community advocates, our organization was born from a shared vision: to create a supportive environment where mental health is openly discussed, understood, and prioritized.</p>
+                    
+                    <h3>What We Do</h3>
+                    <p>We organize educational events, provide resources, facilitate support networks, and advocate for mental health awareness in our community. Through workshops, seminars, and community gatherings, we create safe spaces for dialogue and healing.</p>
+                </div>
+                <div class="about-image">
+                    <img src="mental-health-logo.jpeg" alt="Mental Health Logo" style="width: 300px; height: 300px; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission">
+        <div class="container">
+            <h2 class="section-title">Our Mission & Values</h2>
+            <p class="section-subtitle">Guided by compassion, education, and community empowerment</p>
+            
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="icon">💭</div>
+                    <h3>Raise Awareness</h3>
+                    <p>We work to destigmatize mental health issues through education and open dialogue, helping our community understand that mental health is as important as physical health.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="icon">🤝</div>
+                    <h3>Build Community</h3>
+                    <p>Creating safe, inclusive spaces where individuals can connect, share experiences, and find support from others who understand their journey.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="icon">📚</div>
+                    <h3>Educate & Empower</h3>
+                    <p>Providing accessible resources, workshops, and information to help individuals develop healthy coping strategies and understand mental wellness.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="icon">🌱</div>
+                    <h3>Promote Wellness</h3>
+                    <p>Encouraging holistic approaches to mental health, including mindfulness, self-care practices, and preventive strategies for long-term well-being.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="icon">🎯</div>
+                    <h3>Advocate for Change</h3>
+                    <p>Working towards systemic improvements in mental health services, accessibility, and support systems within our community and beyond.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="icon">✨</div>
+                    <h3>Foster Hope</h3>
+                    <p>Inspiring optimism and resilience by sharing success stories, celebrating progress, and reminding everyone that recovery and healing are possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners">
+        <div class="container">
+            <h2 class="section-title">Our Partners</h2>
+            <p class="section-subtitle">Collaborating with dedicated organizations to make a greater impact</p>
+            
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">CMC</div>
+                    <h4>Cité des Métiers et des Compétences</h4>
+                    <p>Providing venues and vocational training support for mental health initiatives</p>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-logo">SP</div>
+                    <h4>SpeakUp Initiative</h4>
+                    <p>Empowering voices and facilitating open conversations about mental health</p>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-logo">MH</div>
+                    <h4>Men's Mental Health</h4>
+                    <p>Focused on breaking stigma around men's mental health and emotional wellness</p>
+                </div>
+                
+                <div class="partner-card">
+                    <div class="partner-logo">HP</div>
+                    <h4>Hult Prize</h4>
+                    <p>Supporting innovative social entrepreneurship solutions for mental health</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professionals Section -->
+    <section id="professionals">
+        <div class="container">
+            <h2 class="section-title">Our Mental Health Professionals</h2>
+            <p class="section-subtitle">Connect with experienced doctors and psychologists dedicated to your mental wellness</p>
+            
+            <div class="professionals-grid">
+                <!-- Professional Card 1 - Template -->
+                <div class="professional-card">
+                    <div class="professional-image">
+                        <div class="professional-icon">👨‍⚕️</div>
+                    </div>
+                    <h3>Dr. [Name Here]</h3>
+                    <p class="specialty">Psychiatrist</p>
+                    <div class="professional-info">
+                        <p><strong>Specialization:</strong> [Add specialization]</p>
+                        <p><strong>Experience:</strong> [Years] years</p>
+                    </div>
+                    <div class="professional-contact">
+                        <p>📞 <a href="tel:+212XXXXXXXXX">+212 XXX-XXXXXX</a></p>
+                        <p>📧 <a href="/cdn-cgi/l/email-protection#f4909b97809b86b4918c9599849891da979b99"><span class="__cf_email__" data-cfemail="690d060a1d061b290c11080419050c470a0604">[email&#160;protected]</span></a></p>
+                    </div>
+                </div>
+
+                <!-- Professional Card 2 - Template -->
+                <div class="professional-card">
+                    <div class="professional-image">
+                        <div class="professional-icon">👩‍⚕️</div>
+                    </div>
+                    <h3>Dr. [Name Here]</h3>
+                    <p class="specialty">Clinical Psychologist</p>
+                    <div class="professional-info">
+                        <p><strong>Specialization:</strong> [Add specialization]</p>
+                        <p><strong>Experience:</strong> [Years] years</p>
+                    </div>
+                    <div class="professional-contact">
+                        <p>📞 <a href="tel:+212XXXXXXXXX">+212 XXX-XXXXXX</a></p>
+                        <p>📧 <a href="/cdn-cgi/l/email-protection#bdcdcec4ded5d2d1d2dad4cec9fdd8c5dcd0cdd1d893ded2d0"><span class="__cf_email__" data-cfemail="4b3b383228232427242c22383f0b2e332a263b272e65282426">[email&#160;protected]</span></a></p>
+                    </div>
+                </div>
+
+                <!-- Professional Card 3 - Template -->
+                <div class="professional-card">
+                    <div class="professional-image">
+                        <div class="professional-icon">👨‍⚕️</div>
+                    </div>
+                    <h3>Dr. [Name Here]</h3>
+                    <p class="specialty">Therapist</p>
+                    <div class="professional-info">
+                        <p><strong>Specialization:</strong> [Add specialization]</p>
+                        <p><strong>Experience:</strong> [Years] years</p>
+                    </div>
+                    <div class="professional-contact">
+                        <p>📞 <a href="tel:+212XXXXXXXXX">+212 XXX-XXXXXX</a></p>
+                        <p>📧 <a href="/cdn-cgi/l/email-protection#f98d919c8b9889908a8db99c81989489959cd79a9694"><span class="__cf_email__" data-cfemail="f88c909d8a9988918b8cb89d80999588949dd69b9795">[email&#160;protected]</span></a></p>
+                    </div>
+                </div>
+
+                <!-- Add more professional cards by copying the template above -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Event Section -->
+    <section id="event">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Upcoming Event</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Join us for an inspiring discussion on mental wellness</p>
+            
+            <div class="event-content">
+                <h3 style="text-align: center; color: #2d5d4d; font-size: 2rem; margin-bottom: 2rem;">Mental Wellness Workshop</h3>
+                
+                <div class="event-details">
+                    <div class="event-detail">
+                        <div class="label">Date</div>
+                        <div class="value">November 24, 2025</div>
+                    </div>
+                    
+                    <div class="event-detail">
+                        <div class="label">Time</div>
+                        <div class="value">2:00 PM</div>
+                    </div>
+                    
+                    <div class="event-detail">
+                        <div class="label">Location</div>
+                        <div class="value">Cité des Métiers</div>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; margin: 2rem 0; font-size: 1.1rem;">
+                    Learn about mental health support and discover positive coping strategies. Connect with mental health professionals and join a supportive community dedicated to wellness.
+                </p>
+                
+                <div style="text-align: center;">
+                    <a href="https://forms.gle/ejLEe5oWLYCzZnL86" target="_blank" class="btn">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you. Reach out with questions, ideas, or to get involved</p>
+            
+            <div class="contact-info" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+212664897590">+212 664-897590</a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon">📧</div>
+                        <h3>Email</h3>
+                        <p><a href="/cdn-cgi/l/email-protection#ea878f8499878f849e8b86828f8b869e82898789aa8d878b8386c4898587"><span class="__cf_email__" data-cfemail="630e060d100e060d17020f0b06020f170b000e0023040e020a0f4d000c0e">[email&#160;protected]</span></a></p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <h3>Location</h3>
+                        <p>Cité des Métiers et des Compétences<br>Agadir, Morocco</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon">⏰</div>
+                        <h3>Office Hours</h3>
+                        <p>Monday - Friday<br>9:00 AM - 5:00 PM</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon">🌐</div>
+                        <h3>Social Media</h3>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/mentality_cmc?igsh=MXdtMTNjODRvdGkxNA%3D%3D&utm_source=qr" target="_blank">
+                                <img src="instagram-icon.png" alt="Instagram" class="social-icon-small">
+                                Instagram
+                            </a>
+                            <a href="https://www.tiktok.com/@mentality_cmc?_r=1&_t=ZS-91TYNn8kNnU" target="_blank">
+                                <img src="tiktok-icon.png" alt="TikTok" class="social-icon-small">
+                                TikTok
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#mission">Mission</a>
+                <a href="#partners">Partners</a>
+                <a href="#professionals">Professionals</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="social-media" style="margin: 2rem 0;">
+                <h3 style="margin-bottom: 1rem;">Follow Us</h3>
+                <div style="display: flex; justify-content: center; gap: 2rem; align-items: center;">
+                    <a href="https://www.instagram.com/mentality_cmc?igsh=MXdtMTNjODRvdGkxNA%3D%3D&utm_source=qr" target="_blank" style="color: white; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-size: 1.2rem;" title="Follow us on Instagram">
+                        <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                        Instagram
+                    </a>
+                    <a href="https://www.tiktok.com/@mentality_cmc?_r=1&_t=ZS-91TYNn8kNnU" target="_blank" style="color: white; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; font-size: 1.2rem;" title="Follow us on TikTok">
+                        <img src="tiktok-icon.png" alt="TikTok" class="social-icon">
+                        TikTok
+                    </a>
+                </div>
+            </div>
+            
+            <p style="margin: 1rem 0;">
+                <strong>Mental Health Matters</strong><br>
+                Supporting wellness, one conversation at a time
+            </p>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Mental Health Matters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.query
